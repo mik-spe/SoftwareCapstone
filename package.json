@@ -1,0 +1,23 @@
+{
+  "name": "SoftwareCapstone",
+  "version": "1.0.0",
+  "description": "# Team: Mikala, Nathan, Michael, Thomas",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mik-spe/SoftwareCapstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mik-spe/SoftwareCapstone/issues"
+  },
+  "homepage": "https://github.com/mik-spe/SoftwareCapstone#readme",
+  "dependencies": {
+    "tailwindcss": "^2.0.3"
+  }
+}
