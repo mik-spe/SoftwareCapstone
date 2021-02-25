@@ -10,7 +10,9 @@ app.get('/',function(req,res){
     res.render('index');
 })
 
-
+app.get('/test',function(reqm,res){
+  res.render("test");
+})
 
 const port = process.env.PORT || 3000
 app.listen(port, () => console.log(
