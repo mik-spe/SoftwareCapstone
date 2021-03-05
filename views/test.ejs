@@ -9,8 +9,39 @@
 <body>
     <form action="" method="POST">
         <h2>Testing DB Connection</h2>
-        <label for="message">Enter data</label>
-        <input type="text" id="message" name="newMessage">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <label for="workID">Work ID</label>
+        <input type="text" id="workID" name="workID">
+        <br>
+        
+        <label for="vacStatus">Check box if Vaccinated</label>
+        <input type="checkbox" id="vacStatus" name="vacStatus"><br>
+        <br>
+        <label for="dateOfVac">Date of Vaccination</label>
+        <input type="date" id="dateVac" name="dateVac"><br>
+        <br>
+        <label for="infected">Check box if Infected</label>
+        <input type="checkbox" id="infected" name="infectedYes">
+        <br>
+        <label for="datePositiveTest">Date Positive Test</label>
+        <input type="date" id="datePosTest" name="datePositiveTest">
+        <br>
+        <!-- <label for="dateNegativeTest">Date Negative Test</label>
+        <input type="date" id="dateNegativeTest" name="dateNegativeTest"> -->
+        <br>  
+        <label for="dateVac">In quarantine</label>
+        <input type="checkbox" id="quartine" name="quarantine">
+        <br>
+        <label for="message">Quarantine Start Date</label>
+        <input type="date" id="quarDate" name="quarDate">
         <button type="submit">Send</button>
     </form>
 
