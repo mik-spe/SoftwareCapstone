@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));
 
 
 
@@ -16,22 +16,19 @@ const employeeSchema = {
   lastName: String,
   firstName: String, 
   email: String, 
-  workID: String, 
-  vaccinate: {
+  workID: String,
+  datePositiveTest: {
+    type: Date
+  },
+  dateNegativeTest: 
+  {
+    type: Date
+  },
+  vacStatus: {
     type: Boolean,
-  },
-  // dateOfVac: Date,
-  infected: {
-    type: Boolean,
-  },
-  // datePositiveTest: Date,
-  // dateNegativeTest: Date, 
-  quarantine: {
-    type: Boolean, 
-  },
-  // quarantineStartDate: {
-  //   type: Boolean, 
-  // }
+    default: false
+  }
+  
 }
 
 const Employee = mongoose.model("Employee",employeeSchema);
@@ -44,29 +41,30 @@ app.post("/",function(req,res){
   const firstName = req.body.fname;
   const email = req.body.email;
   const workID = req.body. workID;
-  const vacStatus = req.body.vacStatus;
-  const infected = req.body.infected;
-  const dateVac = req.body.dateVac;
   const datePostTest = req.body.datePositiveTest;
+  const dateNegativeTest = req.body.dateNegativeTest;
+  let vacStatus = req.body.vacStatus;
+  if(vacStatus){
+    vacStatus = true;
+  }else{
+    vacStatus = false;
+  }
+  console.log(vacStatus);
+  // const infected = req.body.infected;
+  // const dateVac = req.body.dateVac;
+  // const datePostTest = req.body.datePositiveTest;
   // const dateNegativeTest = req.body.dateNegativeTest;
-  const inQuarantine = req.body.quaratine;
-  const quarDate = req.body.quarDate;
+  // const inQuarantine = req.body.quaratine;
+  // const quarDate = req.body.quarDate;
 
-  
-// console.log(dateVac);
-console.log(vacStatus);
   const employee = new Employee({
     lastName: lastName,
     firstName: firstName,
     email: email,
     workID: workID,
-    vaccinate: vacStatus,
-    dateOfVac:dateVac,
-    infected: infected,
-    // datePositiveTest: datePostTest,
-    // dateNegativeTest: dateNegativeTest,
-    // quarantine: inQuarantine,
-    // quarantineStartDate: quarDate
+    datePositiveTest: datePostTest,
+    dateNegativeTest: dateNegativeTest,
+    vacStatus: vacStatus
 
 
   });
