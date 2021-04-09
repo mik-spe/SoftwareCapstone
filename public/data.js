@@ -11,9 +11,9 @@ async function getapi(url) {
     // Storing data in form of JSON
     var data = await response.json();
     console.log(data);
-    if (response) {
-        hideloader();
-    }
+    // if (response) {
+    //     hideloader();
+    // }
     show(data);
 }
 // Calling that async function
@@ -34,7 +34,7 @@ function show(data) {
          </tr>`;
     
     // Loop to access all rows 
-    for (let r of data.list) {
+    for (let r of data) {
         tab += `<tr> 
     <td>${r.lastName} </td>
     <td>${r.firstName}</td>
