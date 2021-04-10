@@ -36,3 +36,5 @@ app.get("/test", (req, res) => res.render("test"));
 app.get('/faq',(req,res) => res.render("faq"))
 app.get('/announcements',(req,res) => res.render("announcements"))
 app.use(authRoutes);
+
+
