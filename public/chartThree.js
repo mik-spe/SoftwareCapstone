@@ -1,20 +1,20 @@
 // api url
-const api_url2 = 
+const api_url4 = 
       "https://beakon-employee.herokuapp.com/employees";
   
 // Defining async function
-async function getapi(api_url2) {
+async function getapi(api_url4) {
     
     // Storing response
-    const responseOne = await fetch(api_url2);
+    const responseThree = await fetch(api_url4);
     
     // Storing data in form of JSON
-    var dataOne = await responseOne.json();
-    console.log(dataOne);
+    var dataThree = await responseThree.json();
+    console.log(dataThree);
     // if (response) {
     //     hideloader();
     // }
-    showChart(dataOne);
+    showChart3(dataThree);
 }
 // Calling that async function
 getapi("https://beakon-employee.herokuapp.com/employees");
@@ -24,24 +24,23 @@ function hideloader() {
     document.getElementById('loading').style.display = 'none';
 }
 // Function to define innerHTML for HTML table
-function showChart(dataOne) {
+function showChart3(dataThree) {
     let tab = 
         `<tr>
             <th>Last Name</th>
             <th>First Name</th>
+            <th>Work ID</th>
          </tr>`;
     
     // Loop to access all rows 
-    for (let r of dataOne) {
+    for (let r of dataThree) {
 
-        if(r.vacStatus == true)
-        {
             tab += `<tr> 
                 <td>${r.lastName}</td> 
-                <td>${r.firstName}</td> 
+                <td>${r.firstName}</td>
+                <td>${r.workID}</td>
             </tr>`;
-        }
     }
     // Setting innerHTML as tab variable
-    document.getElementById("chartOneData").innerHTML = tab;
+    document.getElementById("chartThreeData").innerHTML = tab;
 }
