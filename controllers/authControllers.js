@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const jwt = require('jsonwebtoken');
 const login_fun = require('../public/login')
 
@@ -67,8 +66,3 @@ module.exports.logout_get = (req,res) =>{
   res.cookie('jwt', '', {maxAge: 1})
   res.redirect('/')
 }
-=======
-module.exports.login_get = (req, res) => {
-    res.render('login');
-  }
->>>>>>> origin/main

@@ -4,13 +4,8 @@ const authConterller = require('../controllers/authControllers');
 const router = Router();
 
 router.get('/login',authConterller.login_get);
-<<<<<<< HEAD
 router.post('/login', authConterller.login_post);
 router.get('/logout',authConterller.logout_get);
-=======
-//router.post('/login', authConterller.login_post);
-//router.get('/logout',authConterller.logout_get);
->>>>>>> origin/main
 
 
 
