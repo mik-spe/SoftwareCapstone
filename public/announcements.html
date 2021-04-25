@@ -1,0 +1,57 @@
+<!-- from: https://www.w3schools.com/howto/howto_js_accordion.asp-->
+
+<!DOCTYPE html>
+<html>
+
+        <head>
+
+            <title>Announcements Page</title>
+
+            <style>
+                
+                h1 {text-align: center;}
+                h2 {text-align: center;}
+             
+            </style>
+            
+
+        </head>
+
+    <body>
+
+        
+        <h1>Announcements Page</h1>
+
+        <h2> The Following employees have tested positive for COVID-19. If you have been in contact with any of these employees, please refer to our FAQ on next steps</h2>
+
+        <div class="w-full md:w-1/2 xl:w-full p-3">
+            <div class="bg-white border-transparent rounded-lg shadow-xl">
+                <div class="bg-gradient-to-b from-gray-300 to-gray-100 uppercase text-gray-800 border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg p-2">
+                    <h5 class="font-bold uppercase text-gray-600">Database</h5>
+                </div>
+                <div class="p-5">
+
+                    <script src="announcementData.js"></script>
+                        
+                    <!-- table for showing data -->
+                    <table class="w-full p-5 text-gray-700 text-left" id="employees">
+
+
+                    </table>
+
+                    
+                </div>
+            </div>
+    </div>
+
+        
+
+
+
+
+    </body>
+
+
+
+
+</html>
