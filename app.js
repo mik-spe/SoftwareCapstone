@@ -1,6 +1,5 @@
 var path = require('path')
 const express = require("express");
-const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const {requireAuth, checkUser} = require ('./middleware/authMiddleware')
 
