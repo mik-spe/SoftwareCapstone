@@ -7,7 +7,7 @@
 
 # Description: A web application that lets businesses keep track of their employee's health
 # with the use of a database with various entry fields being updated.
-
+# REST API we developed for accessing the database: https://github.com/mfbernasol/employee-api 
 # Sources: 
 # Tailwind CSS Tutorial: https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw
 #   - Used for setting up Tailwind on Visual Studio Code
