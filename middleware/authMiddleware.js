@@ -17,7 +17,7 @@ const requireAuth = (req, res, next) => {
   //check if jwt exists and is verified
 
   if (token) {
-    jwt.verify(token, "peepeePoopPoo", (err, decodedToken) => {
+    jwt.verify(token, "authorizedBeakonToken", (err, decodedToken) => {
       if (err) {
         res.redirect("/login");
         console.log(err.message);
@@ -37,7 +37,7 @@ const checkUser = (req, res, next) => {
   const token = req.cookies.jwt;
 
   if (token) {
-    jwt.verify(token, "peepeePoopPoo", async (err, decodedToken) => {
+    jwt.verify(token, "authorizedBeakonToken", async (err, decodedToken) => {
       if (err) {
         console.log(err.message);
         res.locals.user = null;
