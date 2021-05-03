@@ -18,24 +18,11 @@ app.use(cookieParser());
 //veiw engine
 app.set('view engine','ejs');
 
-// database connection
-
-//const dbURI =
-//  "mongodb+srv://Nathan:TrlDs2mXMnPbjEAP@cluster0.a6xht.mongodb.net/node-auth";
-//  mongoose
-//  .connect(dbURI, {
-//    useNewUrlParser: true,
-//    useUnifiedTopology: true,
-//    useCreateIndex: true,
-//  })
-//  .then((result) => app.listen(port))
-//  .catch((err) => console.log(err));
-
 app.listen(port)
 //routes
 app.get('*',checkUser);
-app.get("/", (req, res) => res.render("index"));
-app.get("/test", (req, res) => res.render("test"));
-app.get('/faq',(req,res) => res.render("faq"))
+app.get("/",requireAuth , (req, res) => res.render("index"));
+app.get("/test",requireAuth , (req, res) => res.render("test"));
+app.get('/faq',requireAuth ,(req,res) => res.render("faq"))
 app.get('/announcements', requireAuth ,(req,res) => res.render("announcements"))
 app.use(authRoutes);
