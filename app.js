@@ -33,9 +33,9 @@ app.set('view engine','ejs');
 
 app.listen(port)
 //routes
-app.get('*',checkUser);
+app.get('*',checkUser, requireAuth);
 app.get("/", (req, res) => res.render("index"));
 app.get("/test", (req, res) => res.render("test"));
 app.get('/faq',(req,res) => res.render("faq"))
-app.get('/announcements', requireAuth ,(req,res) => res.render("announcements"))
+app.get('/announcements',(req,res) => res.render("announcements")) 
 app.use(authRoutes);
