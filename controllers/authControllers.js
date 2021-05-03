@@ -6,7 +6,7 @@ const login_fun = require('../public/login')
 
 const maxAge = 3*25*60*60; //3 days
 const createToken = (id) => {
-  return jwt.sign({ id }, 'peepeePoopPoo', {
+  return jwt.sign({ id }, 'authorizedBeakonToken', {
   expiresIn: maxAge
   });
 }
